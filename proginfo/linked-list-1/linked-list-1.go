@@ -16,6 +16,7 @@ func main() {
 	s := bufio.NewScanner(os.Stdin)
 	s.Split(bufio.ScanRunes)
 
+	// read runes from input into the linked list, such that the elements are added from the front
 	var thisElement, nextElement *listElement
 	for s.Scan() {
 		fmt.Print(s.Text())
@@ -28,11 +29,9 @@ func main() {
 		nextElement = thisElement
 	}
 
-	done := false
-	for !done {
-		fmt.Print(thisElement.char, "")
-
-		done = thisElement.next == nil
+	// print out the resultant linked list
+	for thisElement != nil {
+		fmt.Print(thisElement.char)
 		thisElement = thisElement.next
 	}
 
