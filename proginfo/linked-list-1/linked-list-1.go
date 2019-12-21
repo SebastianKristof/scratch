@@ -1,3 +1,6 @@
+/*
+This is an exercise which reads data and reverses it by constructing a linked list and adding to it from the front.
+*/
 package main
 
 import (
