@@ -7,6 +7,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"time"
 )
 
 type listElement struct {
@@ -31,6 +32,8 @@ func main() {
 		}
 		nextElement = thisElement
 	}
+
+	time.Sleep(10 * time.Second) // to see if it's garbage-collected
 
 	// print out the resultant linked list
 	for thisElement != nil {
